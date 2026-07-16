@@ -82,41 +82,12 @@
             position: relative;
             overflow: hidden;
             
-            background: linear-gradient(160deg, 
-                rgba(100, 20, 20, 0.4) 0%,
-                rgba(180, 120, 40, 0.2) 30%,
-                rgba(20, 20, 60, 0.5) 60%,
-                rgba(100, 20, 20, 0.3) 100%
-            ),
-            radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.15), transparent 50%),
-            radial-gradient(circle at 20% 80%, rgba(200, 50, 50, 0.1), transparent 50%),
-            #0a0a1a;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), 
+                        url("images/ilbirs-bg.jpg");
+            background-size: cover;
+            background-position: center;
             
             border-bottom: 4px solid #d4af37;
-        }
-
-        .hero .ornament-top {
-            position: absolute;
-            top: 15px;
-            font-size: 18px;
-            color: #d4af37;
-            letter-spacing: 25px;
-            opacity: 0.2;
-            width: 100%;
-            text-align: center;
-            pointer-events: none;
-        }
-
-        .hero .ornament-bottom {
-            position: absolute;
-            bottom: 15px;
-            font-size: 18px;
-            color: #d4af37;
-            letter-spacing: 25px;
-            opacity: 0.2;
-            width: 100%;
-            text-align: center;
-            pointer-events: none;
         }
 
         .hero h1 {
@@ -401,11 +372,6 @@
                 border: 1px solid rgba(212, 175, 55, 0.2);
                 border-radius: 50px;
             }
-            .hero .ornament-top,
-            .hero .ornament-bottom {
-                font-size: 12px;
-                letter-spacing: 15px;
-            }
         }
 
         @media (max-width: 480px) {
@@ -448,9 +414,6 @@
     </header>
 
     <section class="hero">
-        <div class="ornament-top">✦ ✦ ✦ ✦ ✦</div>
-        <div class="ornament-bottom">✦ ✦ ✦ ✦ ✦</div>
-
         <h1>
             <span class="animal">🐆</span><br>
             <span>Илбирс</span>
