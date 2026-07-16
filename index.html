@@ -1,7 +1,165 @@
-master-kg/
-├── index.html
-├── style.css
-├── script.js
-├── images/
-│   ├── logo.png
-│   └── hero.jpg
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MASTER KG</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:Arial,sans-serif;
+background:#f5f6fa;
+color:#222;
+}
+
+header{
+background:#111827;
+color:#fff;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:15px;
+}
+
+.hero{
+padding:60px 20px;
+text-align:center;
+background:white;
+}
+
+.hero h1{
+font-size:42px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:25px;
+}
+
+.search{
+width:90%;
+max-width:500px;
+padding:15px;
+border-radius:30px;
+border:1px solid #ccc;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:15px 30px;
+background:#ffb000;
+color:black;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+}
+
+.section{
+padding:50px 20px;
+}
+
+.section h2{
+text-align:center;
+margin-bottom:30px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+footer{
+background:#111827;
+color:white;
+padding:20px;
+text-align:center;
+margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">MASTER KG</div>
+
+<nav>
+<a href="#">🇰🇬 KG</a>
+<a href="#">🇷🇺 RU</a>
+<a href="#">🇬🇧 EN</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Бир баскыч — ишенимдүү адис</h1>
+
+<p>Кыргызстандагы кызматтар платформасы</p>
+
+<input class="search" placeholder="Адис же кызмат издеңиз...">
+
+<br>
+
+<a class="btn" href="#">🔍 Издөө</a>
+</section>
+
+<section class="section">
+
+<h2>Популярдуу кызматтар</h2>
+
+<div class="grid">
+
+<div class="card">🔧<br><br>Ремонт</div>
+
+<div class="card">🚚<br><br>Жүк ташуу</div>
+
+<div class="card">🧹<br><br>Тазалоо</div>
+
+<div class="card">💻<br><br>IT кызматтары</div>
+
+<div class="card">📸<br><br>Фото / Видео</div>
+
+<div class="card">✈️<br><br>Тур агенттик</div>
+
+<div class="card">🏊<br><br>Бассейн кызматы</div>
+
+<div class="card">🚕<br><br>Такси</div>
+
+<div class="card">🍔<br><br>Тамак жеткирүү</div>
+
+<div class="card">🛒<br><br>Онлайн дүкөн</div>
+
+</div>
+
+</section>
+
+<footer>
+MASTER KG © 2026<br>
+Кыргызстан • Россия • English
+</footer>
+
+</body>
+</html>
