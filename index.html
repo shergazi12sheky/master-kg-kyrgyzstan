@@ -1,208 +1,230 @@
 <!DOCTYPE html>
 <html lang="ky">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🐆 Ilbirs аркылуу мастер чакыруу</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Илбирс - GitHub стилиндеги сайт</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
+        body {
+            background: #0b0b0b;
+            color: white;
+        }
 
-body{
-font-family:Arial,sans-serif;
-background:#f5f6fa;
-color:#222;
-}
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 50px;
+            background: #111;
+            flex-wrap: wrap;
+        }
 
-header{
-background:#111827;
-color:#fff;
-padding:20px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+        }
 
-.logo{
-font-size:30px;
-font-weight:bold;
-}
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            transition: color 0.3s;
+        }
 
-nav a{
-color:white;
-text-decoration:none;
-margin-left:15px;
-}
+        nav a:hover {
+            color: #d4af37;
+        }
 
-.hero{
-padding:60px 20px;
-text-align:center;
-background:white;
-}
+        .hero {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: #1a1a2e;
+        }
 
-.hero h1{
-font-size:42px;
-margin-bottom:15px;
-}
+        .hero h1 {
+            font-size: 70px;
+        }
 
-.hero p{
-font-size:18px;
-margin-bottom:25px;
-}
+        .hero h2 {
+            font-size: 35px;
+            margin: 20px;
+            font-weight: normal;
+        }
 
-.search{
-width:90%;
-max-width:500px;
-padding:15px;
-border-radius:30px;
-border:1px solid #ccc;
-}
+        .btn {
+            padding: 15px 40px;
+            border: none;
+            border-radius: 30px;
+            background: #d4af37;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            margin: 10px;
+        }
 
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:15px 30px;
-background:#ffb000;
-color:black;
-text-decoration:none;
-border-radius:30px;
-font-weight:bold;
-}
+        .btn:hover {
+            transform: scale(1.05);
+            background: #e6c84c;
+        }
 
-.section{
-padding:50px 20px;
-}
+        /* WhatsApp баскычынын өзүнчө стили */
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+        }
 
-.section h2{
-text-align:center;
-margin-bottom:30px;
-}
+        .btn-whatsapp:hover {
+            background: #1da851;
+        }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
-gap:20px;
-}
+        .about {
+            padding: 70px 20px;
+            text-align: center;
+        }
 
-.card{
-background:white;
-padding:25px;
-border-radius:15px;
-text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-}
+        .about h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
 
-footer{
-background:#111827;
-color:white;
-padding:20px;
-text-align:center;
-margin-top:40px;
-}
-</style>
+        .about p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+            color: #ccc;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 50px 20px;
+        }
+
+        .cards div {
+            background: #191919;
+            padding: 30px;
+            border-radius: 20px;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cards div:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+        }
+
+        .cards h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #d4af37;
+        }
+
+        .cards p {
+            color: #aaa;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        footer {
+            padding: 30px;
+            text-align: center;
+            background: #111;
+            color: #888;
+            font-size: 14px;
+        }
+
+        /* Телефонго ыңгайлуу */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+            }
+            .hero h1 {
+                font-size: 40px;
+            }
+            .hero h2 {
+                font-size: 22px;
+            }
+            .btn {
+                padding: 12px 25px;
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-<section class="services">
-<h2>Биздин кызматтар</h2>
 
-<div class="service-container">
+    <header>
+        <div class="logo">🐆 Илбирс</div>
+        <nav>
+            <a href="#">Башкы</a>
+            <a href="#">Жөнүндө</a>
+            <a href="#">Кызматтар</a>
+            <a href="#">Байланыш</a>
+        </nav>
+    </header>
 
-<div class="service-card">
-🔧
-<h3>Сантехник</h3>
-<p>Суу түтүк, кран, ванна оңдоо</p>
-</div>
+    <section class="hero">
+        <h1>Илбирс Tech</h1>
+        <h2>Заманбап технологиялар дүйнөсү</h2>
+        
+        <!-- 📱 WhatsApp баскычы - СИЗДИН НОМЕРИҢИЗ МЕНЕН -->
+        <a href="https://wa.me/996707901214?text=Салам!%20Мен%20сайттан%20көрүп%20жазам" 
+           class="btn btn-whatsapp" 
+           target="_blank">
+           📱 WhatsApp аркылуу байланышуу
+        </a>
+        
+        <a href="#" class="btn">Көбүрөөк билүү</a>
+    </section>
 
-<div class="service-card">
-⚡
-<h3>Электрик</h3>
-<p>Электр монтаж жана оңдоо</p>
-</div>
+    <section class="about">
+        <h2>Биз кимбиз?</h2>
+        <p>
+            Биз — жаңы муундагы IT компаниясы. Биздин максат — сапаттуу веб-сайттарды,
+            мобилдик колдонмолорду жана заманбап программалык чечимдерди түзүү.
+            Илбирстин ылдамдыгы жана күчү менен иштейбиз!
+        </p>
+    </section>
 
-<div class="service-card">
-🏊
-<h3>Бассейн тейлөө</h3>
-<p>Тазалоо, фильтр жана ремонт</p>
-</div>
+    <section class="cards">
+        <div>
+            <h3>💻 Веб-разработка</h3>
+            <p>Заманбап технологиялар менен уникалдуу сайттарды түзөбүз.</p>
+        </div>
+        <div>
+            <h3>📱 Мобилдик колдонмолор</h3>
+            <p>iOS жана Android үчүн ылдам жана коопсуз колдонмолор.</p>
+        </div>
+        <div>
+            <h3>🚀 AI чечимдер</h3>
+            <p>Жасалма интеллект негизиндеги инновациялык чечимдер.</p>
+        </div>
+    </section>
 
-</div>
-</section>
-<header>
-<div class="logo">MASTER KG</div>
-
-<nav>
-<a href="#">🇰🇬 KG</a>
-<a href="#">🇷🇺 RU</a>
-<a href="#">🇬🇧 EN</a>
-</nav>
-</header>
-
-<section class="hero">
-<h1>Бир баскыч — ишенимдүү адис</h1>
-
-<p>Кыргызстандагы кызматтар платформасы</p>
-
-<input class="search" placeholder="Адис же кызмат издеңиз...">
-
-<br>
-
-<a class="btn" href="#">🔍 Издөө</a>
-</section>
-
-<section class="section">
-
-<h2>Популярдуу кызматтар</h2>
-
-<div class="grid">
-
-<div class="card">🔧<br><br>Ремонт</div>
-
-<div class="card">🚚<br><br>Жүк ташуу</div>
-
-<div class="card">🧹<br><br>Тазалоо</div>
-
-<div class="card">💻<br><br>IT кызматтары</div>
-
-<div class="card">📸<br><br>Фото / Видео</div>
-
-<div class="card">✈️<br><br>Тур агенттик</div>
-
-<div class="card">🏊<br><br>Бассейн кызматы</div>
-
-<div class="card">🚕<br><br>Такси</div>
-
-<div class="card">🍔<br><br>Тамак жеткирүү</div>
-
-<div class="card">🛒<br><br>Онлайн дүкөн</div>
-
-</div>
-
-</section>
-
-<footer>
-🐆 Ilbirs© 2026<br>
-Кыргызстан • Россия • English
-</footer>
-MASTER KG © 2026<br>
-Кыргызстан • Россия • English
-</footer>
-
-
-<section class="order">
-    <h2>Мастер чакыруу</h2>
-    <p>Керектүү кызматты тандап, бизге жазыңыз</p>
-
-    <a class="whatsapp-btn" 
-    href="https://wa.me/996707901214" 
-    target="_blank">
-    📲 WhatsApp аркылуу заказ берүү
-    </a>
-<section class="order">
-...
-
-</section>
+    <footer>
+        &copy; 2026 Илбирс Tech. Бардык укуктар корголгон.
+    </footer>
 
 </body>
 </html>
-
