@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ИЛБИРС KG · Снежный барс</title>
+  <title>ИЛБИРС KG · Кыргыз Илбириси – Улуттук Мурасыбыз</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
@@ -16,9 +16,9 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: #f6f4f0;
+      background: #f4f1ea;
       color: #1e2b2e;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     .container {
@@ -27,11 +27,15 @@
       padding: 0 24px;
     }
 
+    /* ===== HEADER ===== */
     .header {
-      background: #0f2a2b;
+      background: #0a1f20;
       color: #f0ede8;
-      padding: 18px 0;
-      border-bottom: 4px solid #c9a87c;
+      padding: 16px 0;
+      border-bottom: 4px solid #b8956a;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .header-inner {
@@ -42,30 +46,35 @@
     }
 
     .logo h1 {
-      font-size: 2rem;
-      font-weight: 800;
+      font-size: 1.8rem;
+      font-weight: 900;
       letter-spacing: -0.5px;
       display: flex;
       align-items: center;
       gap: 8px;
     }
 
-    .logo span {
-      background: #c9a87c;
-      color: #0f2a2b;
-      font-size: 0.8rem;
-      font-weight: 700;
-      padding: 2px 12px;
+    .logo h1 span {
+      background: #b8956a;
+      color: #0a1f20;
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 2px 14px;
       border-radius: 30px;
-      letter-spacing: 0.3px;
+      letter-spacing: 0.5px;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 20px;
     }
 
     .nav a {
-      color: #dfd9d0;
+      color: #d5cec2;
       text-decoration: none;
-      margin-left: 28px;
       font-weight: 600;
-      font-size: 1rem;
+      font-size: 0.95rem;
       transition: 0.2s;
       border-bottom: 2px solid transparent;
       padding-bottom: 4px;
@@ -73,69 +82,117 @@
 
     .nav a:hover {
       color: #f5e7d9;
-      border-bottom-color: #c9a87c;
+      border-bottom-color: #b8956a;
     }
 
-    .nav a:first-child {
-      margin-left: 0;
-    }
-
+    /* ===== HERO ===== */
     .hero {
-      background: linear-gradient(145deg, #1f3d3e 0%, #163032 100%);
+      background: linear-gradient(165deg, rgba(18,48,50,0.88), rgba(15,42,43,0.92)), url('E9A584FE-7831-472A-8465-63B4D56D4A95.png') center/cover no-repeat;
       color: white;
-      padding: 60px 0 56px;
-      margin-top: 0;
-      border-radius: 0 0 40px 40px;
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+      padding: 70px 0 60px;
+      border-radius: 0 0 50px 50px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "🐆";
+      position: absolute;
+      right: -40px;
+      bottom: -40px;
+      font-size: 260px;
+      opacity: 0.04;
+      transform: rotate(-8deg);
     }
 
     .hero-grid {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 40px;
+      gap: 50px;
+      position: relative;
+      z-index: 2;
     }
 
     .hero-text {
       flex: 1 1 300px;
     }
 
+    .hero-text .subtitle {
+      font-size: 0.85rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #d4c5ad;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
     .hero-text h2 {
-      font-size: 2.8rem;
-      font-weight: 800;
-      line-height: 1.2;
+      font-size: 3rem;
+      font-weight: 900;
+      line-height: 1.15;
       letter-spacing: -0.02em;
     }
 
     .hero-text h2 i {
-      color: #e6d5b5;
+      color: #dcc29e;
       font-style: normal;
     }
 
-    .hero-text p {
+    .hero-text .tagline {
       font-size: 1.2rem;
-      margin: 20px 0 30px;
-      opacity: 0.85;
-      max-width: 500px;
+      margin: 18px 0 8px;
+      opacity: 0.9;
+      font-weight: 400;
+      max-width: 520px;
+    }
+
+    .hero-text .slogan {
+      font-size: 1.1rem;
+      opacity: 0.75;
+      font-weight: 300;
+      margin-bottom: 28px;
+      border-left: 3px solid #b8956a;
+      padding-left: 18px;
+      max-width: 480px;
+    }
+
+    .hero-text .quick-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .hero-text .quick-links span {
+      background: rgba(255,255,255,0.08);
+      padding: 4px 14px;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #d4c5ad;
+      border: 1px solid rgba(255,255,255,0.06);
     }
 
     .btn-group {
       display: flex;
       flex-wrap: wrap;
-      gap: 16px;
+      gap: 14px;
+      margin-top: 8px;
     }
 
     .btn {
-      background: #c9a87c;
+      background: #b8956a;
       border: none;
       padding: 14px 36px;
       border-radius: 60px;
       font-weight: 700;
       font-size: 1rem;
-      color: #0f2a2b;
+      color: #0a1f20;
       cursor: pointer;
-      transition: 0.2s;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: 0.25s;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -144,29 +201,29 @@
 
     .btn-outline {
       background: transparent;
-      border: 2px solid #c9a87c;
+      border: 2px solid #b8956a;
       color: #f0ede8;
       box-shadow: none;
     }
 
     .btn-outline:hover {
-      background: #c9a87c;
-      color: #0f2a2b;
+      background: #b8956a;
+      color: #0a1f20;
     }
 
     .btn:hover {
-      transform: scale(1.02);
-      background: #dbbc93;
+      transform: scale(1.03);
+      background: #c9a87c;
     }
 
     .hero-stats {
-      flex: 1 1 280px;
+      flex: 1 1 260px;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 24px 16px;
-      background: rgba(255, 255, 255, 0.04);
-      backdrop-filter: blur(2px);
-      padding: 24px 20px;
+      gap: 20px 14px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(4px);
+      padding: 28px 22px;
       border-radius: 40px;
       border: 1px solid rgba(255, 255, 255, 0.08);
     }
@@ -176,49 +233,67 @@
     }
 
     .stat-number {
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: #e6d5b5;
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: #dcc29e;
       line-height: 1;
     }
 
     .stat-label {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       opacity: 0.75;
-      margin-top: 6px;
+      margin-top: 4px;
       font-weight: 500;
     }
 
+    .stat-label small {
+      display: block;
+      opacity: 0.5;
+      font-weight: 400;
+      font-size: 0.7rem;
+      margin-top: 2px;
+    }
+
+    /* ===== SECTION ===== */
     .section {
-      padding: 64px 0;
+      padding: 70px 0;
     }
 
     .section-title {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 16px;
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 8px;
       letter-spacing: -0.02em;
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
+      flex-wrap: wrap;
     }
 
     .section-title small {
       font-size: 1rem;
       font-weight: 400;
-      opacity: 0.6;
-      margin-left: 6px;
+      opacity: 0.5;
+      margin-left: 4px;
     }
 
+    .section-sub {
+      color: #5b6e6b;
+      font-size: 1.05rem;
+      margin-bottom: 30px;
+      max-width: 700px;
+    }
+
+    /* ===== ABOUT ===== */
     .about-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 40px;
       background: white;
-      padding: 40px 36px;
+      padding: 44px 40px;
       border-radius: 40px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-      border: 1px solid #ece8e0;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+      border: 1px solid #e8e2d8;
     }
 
     .about-text {
@@ -226,45 +301,52 @@
     }
 
     .about-text p {
-      font-size: 1.1rem;
-      margin-bottom: 20px;
+      font-size: 1.05rem;
+      margin-bottom: 18px;
       color: #2b3d3e;
     }
 
     .about-text .highlight {
-      font-weight: 600;
-      color: #0f2a2b;
-      background: #f2ede6;
-      padding: 2px 12px;
+      font-weight: 700;
+      color: #0a1f20;
+      background: #f0ebe2;
+      padding: 2px 14px;
       border-radius: 20px;
       display: inline-block;
     }
 
+    .about-text .divider {
+      width: 60px;
+      height: 3px;
+      background: #b8956a;
+      margin: 18px 0 22px;
+      border-radius: 4px;
+    }
+
     .about-mission {
       flex: 1 1 220px;
-      background: #f3f0ea;
+      background: #f5f1ea;
       border-radius: 28px;
-      padding: 24px 22px;
+      padding: 28px 24px;
     }
 
     .about-mission h4 {
       font-size: 1.1rem;
       font-weight: 700;
-      color: #0f2a2b;
-      margin-bottom: 10px;
+      color: #0a1f20;
+      margin-bottom: 14px;
     }
 
     .about-mission ul {
       list-style: none;
-      margin-top: 12px;
     }
 
     .about-mission li {
-      padding: 8px 0;
-      border-bottom: 1px solid rgba(0,0,0,0.04);
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       font-size: 0.95rem;
     }
 
@@ -272,61 +354,146 @@
       border-bottom: 0;
     }
 
+    .about-mission .badge-location {
+      margin-top: 18px;
+      font-size: 0.9rem;
+      background: #ddd6cb;
+      padding: 8px 16px;
+      border-radius: 40px;
+      display: inline-block;
+    }
+
+    .about-mission .quick-badge {
+      margin-top: 12px;
+      font-size: 0.8rem;
+      background: #c9b8a5;
+      padding: 6px 14px;
+      border-radius: 30px;
+      display: inline-block;
+      color: #0a1f20;
+    }
+
+    /* ===== SERVICES ===== */
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 28px;
-      margin-top: 24px;
+      margin-top: 10px;
     }
 
     .service-card {
       background: white;
-      padding: 28px 20px 24px;
+      padding: 30px 22px 24px;
       border-radius: 28px;
       border: 1px solid #e7e1d8;
-      transition: 0.2s;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+      transition: 0.3s;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
     }
 
     .service-card:hover {
       transform: translateY(-6px);
-      border-color: #c9a87c;
-      box-shadow: 0 16px 28px -12px rgba(0,0,0,0.12);
+      border-color: #b8956a;
+      box-shadow: 0 20px 32px -14px rgba(0, 0, 0, 0.12);
     }
 
     .service-icon {
-      font-size: 2.2rem;
+      font-size: 2rem;
       margin-bottom: 10px;
       display: block;
     }
 
     .service-card h3 {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       font-weight: 700;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
+    }
+
+    .service-card h3 small {
+      font-weight: 400;
+      opacity: 0.5;
+      font-size: 0.8rem;
+      display: block;
     }
 
     .service-card p {
       font-size: 0.95rem;
       color: #3b4f50;
       opacity: 0.85;
+      margin-top: 4px;
     }
 
     .service-card .meta {
       font-size: 0.8rem;
       color: #6b7e7a;
-      margin-top: 12px;
+      margin-top: 14px;
       border-top: 1px dashed #dcd5ca;
       padding-top: 12px;
       display: flex;
       justify-content: space-between;
     }
 
+    .info-banner {
+      margin-top: 30px;
+      background: #eae6df;
+      border-radius: 60px;
+      padding: 16px 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 32px;
+      justify-content: center;
+      font-weight: 500;
+      color: #1d3335;
+    }
+
+    /* ===== BRAND SECTION ===== */
+    .brand-section {
+      background: #0a1f20;
+      color: #ede7dd;
+      padding: 50px 0;
+      border-radius: 40px;
+      margin: 20px 0 40px;
+    }
+
+    .brand-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .brand-item {
+      flex: 1 1 150px;
+      padding: 20px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .brand-item .brand-icon {
+      font-size: 2.5rem;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .brand-item h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #dcc29e;
+    }
+
+    .brand-item p {
+      font-size: 0.8rem;
+      opacity: 0.6;
+      margin-top: 4px;
+    }
+
+    /* ===== FOOTER ===== */
     .footer {
-      background: #0f2a2b;
+      background: #0a1f20;
       color: #cfccc4;
-      padding: 40px 0 30px;
-      margin-top: 40px;
+      padding: 48px 0 30px;
+      margin-top: 30px;
       border-radius: 40px 40px 0 0;
     }
 
@@ -334,16 +501,18 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: 30px;
+      gap: 36px;
     }
 
     .footer h4 {
       color: #ede7dd;
       font-weight: 700;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
+      font-size: 1.1rem;
     }
 
-    .footer p, .footer a {
+    .footer p,
+    .footer a {
       font-size: 0.95rem;
       color: #b5b0a5;
       text-decoration: none;
@@ -356,13 +525,13 @@
     .footer-contact {
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 6px;
     }
 
     .footer-contact .contact-item {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       padding: 4px 0;
     }
 
@@ -376,71 +545,132 @@
       color: #e6d5b5;
     }
 
-    .footer-copy {
-      margin-top: 30px;
-      border-top: 1px solid #284142;
-      padding-top: 24px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      font-size: 0.9rem;
-      opacity: 0.7;
-    }
-
-    .badge {
-      background: #1f3d3e;
-      padding: 4px 16px;
-      border-radius: 40px;
-      color: #c9a87c;
-      font-weight: 600;
-      font-size: 0.8rem;
-    }
-
     .whatsapp-btn {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       background: #25D366;
       color: #fff !important;
-      padding: 8px 18px;
+      padding: 10px 24px;
       border-radius: 40px;
-      font-weight: 600;
+      font-weight: 700;
       font-size: 0.9rem;
       transition: 0.2s;
       text-decoration: none;
+      margin-top: 8px;
+      width: fit-content;
     }
 
     .whatsapp-btn:hover {
       background: #1ebe5c;
       transform: scale(1.02);
+      color: #fff !important;
+    }
+
+    .footer-copy {
+      margin-top: 32px;
+      border-top: 1px solid #284142;
+      padding-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      opacity: 0.65;
+    }
+
+    .badge {
+      background: #1a3a3b;
+      padding: 4px 16px;
+      border-radius: 40px;
+      color: #c9a87c;
+      font-weight: 600;
+      font-size: 0.75rem;
+    }
+
+    .lang-switch {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .lang-switch a {
+      color: #b5b0a5;
+      text-decoration: none;
+      font-size: 0.75rem;
+      padding: 2px 12px;
+      border-radius: 12px;
+      transition: 0.2s;
+      font-weight: 600;
+    }
+
+    .lang-switch a:hover {
+      background: #1a3a3b;
+      color: #e6d5b5;
+    }
+
+    .lang-switch a.active {
+      background: #b8956a;
+      color: #0a1f20;
+    }
+
+    .footer-phone {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #dcc29e !important;
+    }
+
+    .footer .quick-info {
+      font-size: 0.8rem;
+      opacity: 0.5;
+      margin-top: 6px;
     }
 
     @media (max-width: 700px) {
       .header-inner {
         flex-direction: column;
-        gap: 14px;
+        gap: 12px;
       }
-      .nav a {
-        margin: 0 12px;
+      .nav {
+        justify-content: center;
       }
       .hero-text h2 {
         font-size: 2.2rem;
       }
       .hero-stats {
         grid-template-columns: 1fr 1fr;
-        padding: 20px 16px;
+        padding: 18px 14px;
       }
       .about-grid {
-        padding: 24px 20px;
+        padding: 24px 18px;
       }
       .footer-grid {
         flex-direction: column;
+      }
+      .footer-copy {
+        flex-direction: column;
+        gap: 6px;
+        text-align: center;
+      }
+      .hero::before {
+        font-size: 160px;
+        right: -20px;
+        bottom: -20px;
+      }
+      .brand-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+      .brand-item {
+        width: 100%;
+        max-width: 280px;
       }
     }
   </style>
 </head>
 <body>
 
+<!-- ===== HEADER ===== -->
 <header class="header">
   <div class="container header-inner">
     <div class="logo">
@@ -448,18 +678,26 @@
     </div>
     <nav class="nav">
       <a href="#">Башкы</a>
-      <a href="#">Биз жөнүндө</a>
-      <a href="#">Кызматтар</a>
-      <a href="#">Байланыш</a>
+      <a href="#about">Биз жөнүндө</a>
+      <a href="#services">Кызматтар</a>
+      <a href="#contact">Байланыш</a>
     </nav>
   </div>
 </header>
 
+<!-- ===== HERO ===== -->
 <section class="hero">
   <div class="container hero-grid">
     <div class="hero-text">
-      <h2>Кыргыз <i>илбириси</i> —<br /> улуттук мурасыбыз</h2>
-      <p>Илбирсти сактоо – жаратылышты сактоо. Жаратылышты сактоо – келечекти сактоо.</p>
+      <div class="subtitle">🐾 Кыргыз Илбириси – Улуттук Мурасыбыз</div>
+      <h2>Илбирсти сактоо — <i>жаратылышты сактоо</i></h2>
+      <p class="tagline">Жаратылышты сактоо — келечекти сактоо.</p>
+      <p class="slogan">"Кыргызстандын күчү, маңызы жана руху"</p>
+      <div class="quick-links">
+        <span>⚡ Быстрый</span>
+        <span>🔹 БК: xanHioa</span>
+        <span>🚀 Баштоо</span>
+      </div>
       <div class="btn-group">
         <a href="#about" class="btn">🌿 Биз жөнүндө</a>
         <a href="#contact" class="btn btn-outline">📞 Байланыш</a>
@@ -468,103 +706,143 @@
     <div class="hero-stats">
       <div class="stat-item">
         <div class="stat-number">150+</div>
-        <div class="stat-label">Илбирс байкалган</div>
+        <div class="stat-label">Илбирс байкалган <small>Снежных барсов замечено</small></div>
       </div>
       <div class="stat-item">
         <div class="stat-number">90%</div>
-        <div class="stat-label">Кыргызстандын тоолорунда</div>
+        <div class="stat-label">Кыргызстандын тоолорунда <small>В горах Кыргызстана</small></div>
       </div>
       <div class="stat-item">
         <div class="stat-number">500+</div>
-        <div class="stat-label">Колдоочулар</div>
+        <div class="stat-label">Колдоочулар <small>Сторонников</small></div>
       </div>
       <div class="stat-item">
         <div class="stat-number">1000+</div>
-        <div class="stat-label">Дарак отургузулган</div>
+        <div class="stat-label">Дарак отургузулган <small>Деревьев посажено</small></div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ===== BRAND SECTION ===== -->
+<section class="brand-section">
+  <div class="container">
+    <div class="brand-grid">
+      <div class="brand-item">
+        <span class="brand-icon">⚡</span>
+        <h4>Быстрый</h4>
+        <p>Тез жана натыйжалуу</p>
+      </div>
+      <div class="brand-item">
+        <span class="brand-icon">🔹</span>
+        <h4>БК: xanHioa</h4>
+        <p>Бренддик код</p>
+      </div>
+      <div class="brand-item">
+        <span class="brand-icon">🏔️</span>
+        <h4>Кыргызстандын күчү</h4>
+        <p>Маңызы жана руху</p>
+      </div>
+      <div class="brand-item">
+        <span class="brand-icon">🚀</span>
+        <h4>Баштоо</h4>
+        <p>Жаңы мүмкүнчүлүктөр</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
 <section class="section" id="about">
   <div class="container">
     <div class="section-title">
       Биз жөнүндө <small>О нас</small>
     </div>
+    <p class="section-sub">Кыргыз илбирин коргоо – биздин негизги милдет</p>
     <div class="about-grid">
       <div class="about-text">
         <p><span class="highlight">ILBIRS KG</span> – кыргыз илбирсин коргоо жана анын жашоо чөйрөсүн сактоо үчүн түзүлгөн уюм. Биздин максат – жаратылышты коргоо, илимий изилдөөлөрдү колдоо жана коомчулуктун маалымуулугун жогорулатуу.</p>
+        <div class="divider"></div>
         <p style="opacity:0.8;"><strong>ILBIRS KG</strong> – организация, созданная для сохранения снежного барса и его среды обитания. Наша цель – охрана природы, поддержка научных исследований и повышение осведомленности общества.</p>
-        <a href="#" class="btn" style="margin-top:12px; display:inline-block;">Кененирээк →</a>
+        <a href="#" class="btn" style="margin-top:16px; display:inline-block;">Кененирээк / Подробнее →</a>
       </div>
       <div class="about-mission">
-        <h4>🧭 Багыттар</h4>
+        <h4>🧭 Биздин багыттар</h4>
         <ul>
-          <li>🐾 Коргоо / Охрана</li>
-          <li>🔬 Илимий изилдөө</li>
-          <li>📚 Билим берүү</li>
-          <li>🤝 Өнөктөштүк</li>
+          <li>🛡️ Коргоо / Охрана</li>
+          <li>🔬 Илимий изилдөө / Научные исследования</li>
+          <li>📚 Билим берүү / Образование</li>
+          <li>🤝 Өнөктөштүк / Партнёрство</li>
         </ul>
-        <div style="margin-top: 20px; font-size:0.9rem; background: #e3ddd4; padding: 8px 14px; border-radius: 40px; display: inline-block;">🌍 Кыргызстан, Бишкек</div>
+        <div class="badge-location">🌍 Кыргызстан, Бишкек</div>
+        <div class="quick-badge">⚡ Быстрый · БК: xanHioa</div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" style="padding-top: 0;">
+<!-- ===== SERVICES ===== -->
+<section class="section" id="services" style="padding-top: 0;">
   <div class="container">
     <div class="section-title">
       Кызматтар <small>Услуги</small>
     </div>
+    <p class="section-sub">Биздин негизги багыттар жана иш-аракеттер</p>
     <div class="services-grid">
       <div class="service-card">
         <span class="service-icon">🛡️</span>
-        <h3>Коргоо</h3>
+        <h3>Коргоо <small>Охрана</small></h3>
         <p>Илбирсти жашоо чөйрөсүн коргоо боюнча иштерди жүргүзбүз.</p>
-        <div class="meta"><span>Охрана</span> <span>→</span></div>
+        <div class="meta"><span>Экология</span> <span>→</span></div>
       </div>
       <div class="service-card">
         <span class="service-icon">🔬</span>
-        <h3>Илимий изилдөө</h3>
+        <h3>Илимий изилдөө <small>Научные исследования</small></h3>
         <p>Илимий изилдөөлөрдү колдон, маалыматтарды чогултабыз.</p>
-        <div class="meta"><span>Научные исследования</span> <span>→</span></div>
+        <div class="meta"><span>Data &amp; Research</span> <span>→</span></div>
       </div>
       <div class="service-card">
         <span class="service-icon">📖</span>
-        <h3>Билим берүү</h3>
+        <h3>Билим берүү <small>Образование</small></h3>
         <p>Коомчулуктун маалымуулугун жогорулатуу үчүн билим берүү программалары.</p>
-        <div class="meta"><span>Образование</span> <span>→</span></div>
+        <div class="meta"><span>Коом / Общество</span> <span>→</span></div>
       </div>
       <div class="service-card">
         <span class="service-icon">🤝</span>
-        <h3>Өнөктөштүк</h3>
+        <h3>Өнөктөштүк <small>Партнёрство</small></h3>
         <p>Жергиликтүү жана эл аралык уюмдар менен кызматташабыз.</p>
-        <div class="meta"><span>Партнёрство</span> <span>→</span></div>
+        <div class="meta"><span>Сотрудничество</span> <span>→</span></div>
       </div>
     </div>
-    <div style="margin-top: 28px; background: #eae6df; border-radius: 60px; padding: 14px 28px; display: flex; flex-wrap: wrap; gap: 12px 28px; justify-content: center; font-weight: 500; color: #1d3335;">
+    <div class="info-banner">
       <span>🐾 Проводим образовательные программы для повышения осведомленности общества.</span>
       <span>🌐 Сотрудничаем с местными и международными организациями.</span>
     </div>
   </div>
 </section>
 
+<!-- ===== FOOTER ===== -->
 <footer class="footer" id="contact">
   <div class="container">
     <div class="footer-grid">
       <div>
         <h4>🐆 ILBIRS KG</h4>
-        <p style="max-width:240px;">Кыргыз илбирсин коргоо жана анын жашоо чөйрөсүн сактоо үчүн түзүлгөн уюм.</p>
-        <div style="margin-top: 12px; display: flex; gap: 12px; flex-wrap: wrap;">
+        <p style="max-width:260px;">Кыргыз илбирсин коргоо жана анын жашоо чөйрөсүн сактоо үчүн түзүлгөн уюм.</p>
+        <div style="margin-top: 14px; display: flex; gap: 10px; flex-wrap: wrap;">
           <span class="badge">#snowleopard</span>
           <span class="badge">#conservation</span>
+          <span class="badge">#кыргызстан</span>
+        </div>
+        <div style="margin-top: 12px;">
+          <span class="badge" style="background:#2a4a4b;">⚡ Быстрый</span>
+          <span class="badge" style="background:#2a4a4b;">🔹 БК: xanHioa</span>
         </div>
       </div>
       <div class="footer-contact">
-        <h4>📱 Байланыш</h4>
+        <h4>📱 Байланыш / Контакты</h4>
         <div class="contact-item">
           <span>📞</span>
-          <a href="tel:+996700123456">+996 700 123 456</a>
+          <a href="tel:+996700123456" class="footer-phone">+996 700 123 456</a>
         </div>
         <div class="contact-item">
           <span>💬</span>
@@ -578,15 +856,20 @@
           <span>📍</span>
           <span>Кыргызстан, Бишкек</span>
         </div>
-        <div style="margin-top: 12px;">
-          <a href="https://wa.me/996707901214" target="_blank" class="whatsapp-btn">💬 WhatsApp</a>
-        </div>
+        <a href="https://wa.me/996707901214" target="_blank" class="whatsapp-btn">💬 WhatsApp</a>
       </div>
       <div>
         <h4>Шилтемелер</h4>
-        <p><a href="#">Биз жөнүндө</a></p>
-        <p><a href="#">Кызматтар</a></p>
-        <p><a href="#">Долбоорлор</a></p>
+        <p><a href="#">Башкы / Главная</a></p>
+        <p><a href="#about">Биз жөнүндө / О нас</a></p>
+        <p><a href="#services">Кызматтар / Услуги</a></p>
+        <p><a href="#contact">Байланыш / Контакты</a></p>
+        <div class="lang-switch">
+          <a href="#" class="active">KG</a>
+          <a href="#">RU</a>
+          <a href="#">EN</a>
+        </div>
+        <div class="quick-info">⚡ Быстрый · БК: xanHioa</div>
       </div>
     </div>
     <div class="footer-copy">
@@ -598,24 +881,38 @@
 
 <script>
   (function() {
-    const btns = document.querySelectorAll('.btn:not(.btn-outline)');
-    btns.forEach(btn => {
+    // Бардык btn шилтемелер үчүн
+    document.querySelectorAll('.btn').forEach(btn => {
       btn.addEventListener('click', function(e) {
-        if (this.innerText.includes('Баштоо') || this.innerText.includes('жөнүндө') || this.innerText.includes('Кененирээк')) {
+        if (this.getAttribute('href') === '#') {
           e.preventDefault();
           alert('🐆 ILBIRS KG — Кыргызстандын илбирсин коргоо платформасы');
         }
       });
     });
 
+    // Навигация
     document.querySelectorAll('.nav a').forEach(link => {
       link.addEventListener('click', function(e) {
-        e.preventDefault();
-        alert(`🌿 Бөлүм: ${this.innerText}`);
+        if (this.getAttribute('href') === '#') {
+          e.preventDefault();
+          alert('🌿 Бөлүм: ' + this.innerText);
+        }
       });
     });
 
-    // WhatsApp шилтемесин чыкылдатканда эскертүү жок (түз ачылат)
+    // Тил баскычтары
+    document.querySelectorAll('.lang-switch a').forEach(lang => {
+      lang.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelectorAll('.lang-switch a').forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+        alert('🌐 Тил өзгөртүлдү: ' + this.innerText);
+      });
+    });
+
+    console.log('🐆 ILBIRS KG — Кыргыз Илбириси – Улуттук Мурасыбыз');
+    console.log('⚡ Быстрый · БК: xanHioa');
   })();
 </script>
 
