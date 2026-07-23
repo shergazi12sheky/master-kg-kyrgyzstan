@@ -144,5 +144,12 @@ nav {
 .hero h1 {
     font-size: 25px;
 }
+/* ILBIRS BACKGROUND */
 
+body {
+    background-image: url("images/fon.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
+
