@@ -231,3 +231,44 @@ alert("Вы вышли из аккаунта");
 window.location.href="login.html";
 
 }
+// ILBIRS Show Orders
+
+let ordersBox = document.getElementById("ordersList");
+
+let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+
+if(ordersBox && orders.length > 0){
+
+
+ordersBox.innerHTML = "";
+
+
+orders.forEach(function(order){
+
+
+ordersBox.innerHTML += `
+
+<div class="product">
+
+<h3>
+${order.name}
+</h3>
+
+<p>
+Цена: ${order.price}
+</p>
+
+<p>
+Статус: Новый заказ
+</p>
+
+</div>
+
+`;
+
+
+});
+
+
+}
