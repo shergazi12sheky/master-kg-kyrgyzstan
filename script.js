@@ -410,3 +410,65 @@ ${product.description}
 });
 
 }
+// ILBIRS Product Filter
+
+function filterProducts(category){
+
+let products = document.querySelectorAll(".product");
+
+
+products.forEach(function(product){
+
+
+let text = product.innerText;
+
+
+if(text.includes(category)){
+
+product.style.display = "block";
+
+}else{
+
+product.style.display = "none";
+
+}
+
+
+});
+
+}
+
+
+// Search
+
+function searchProducts(){
+
+let input = document
+.getElementById("searchInput")
+.value
+.toLowerCase();
+
+
+let products = document.querySelectorAll(".product");
+
+
+products.forEach(function(product){
+
+
+let name = product.innerText.toLowerCase();
+
+
+if(name.includes(input)){
+
+product.style.display = "block";
+
+}else{
+
+product.style.display = "none";
+
+}
+
+
+});
+
+}
