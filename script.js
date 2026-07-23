@@ -311,3 +311,49 @@ ${order.name}
 
 
 }
+// ILBIRS Add Product System
+
+function addProduct(){
+
+let name = document.querySelector("input[placeholder='Название товара']").value;
+
+let price = document.querySelector("input[placeholder='Цена (сом)']").value;
+
+let category = document.querySelector("select").value;
+
+let image = document.querySelector("input[placeholder='Ссылка на фото товара']").value;
+
+let description = document.querySelector("textarea").value;
+
+
+let product = {
+
+name:name,
+
+price:price,
+
+category:category,
+
+image:image,
+
+description:description
+
+};
+
+
+let products = JSON.parse(localStorage.getItem("products")) || [];
+
+
+products.push(product);
+
+
+localStorage.setItem("products", JSON.stringify(products));
+
+
+alert("Товар опубликован!");
+
+
+window.location.href="marketplace.html";
+
+
+}
