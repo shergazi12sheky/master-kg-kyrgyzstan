@@ -111,3 +111,33 @@ product.style.display = "none";
 });
 
 }
+// ILBIRS Seller Product Save
+
+function addProduct(){
+
+let name = document.querySelector(".productName").value;
+
+let price = document.querySelector(".productPrice").value;
+
+
+let product = {
+
+name: name,
+
+price: price
+
+};
+
+
+let products = JSON.parse(localStorage.getItem("products")) || [];
+
+
+products.push(product);
+
+
+localStorage.setItem("products", JSON.stringify(products));
+
+
+alert("Товар добавлен!");
+
+}
