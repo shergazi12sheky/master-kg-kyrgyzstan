@@ -357,3 +357,56 @@ window.location.href="marketplace.html";
 
 
 }
+// ILBIRS Marketplace Products
+
+let marketBox = document.getElementById("marketProducts");
+
+let productsList = JSON.parse(localStorage.getItem("products")) || [];
+
+
+if(marketBox){
+
+marketBox.innerHTML = "";
+
+
+productsList.forEach(function(product){
+
+
+marketBox.innerHTML += `
+
+<div class="product">
+
+<img src="${product.image}" width="200">
+
+
+<h3>
+${product.name}
+</h3>
+
+
+<p>
+${product.price} сом</p>
+
+
+<p>
+${product.category}
+</p>
+
+
+<p>
+${product.description}
+</p>
+
+
+<button>
+🛒 В корзину
+</button>
+
+
+</div>
+
+`;
+
+});
+
+}
