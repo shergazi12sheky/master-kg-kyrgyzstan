@@ -141,3 +141,35 @@ localStorage.setItem("products", JSON.stringify(products));
 alert("Товар добавлен!");
 
 }
+// Show seller products in marketplace
+
+let sellerProducts = JSON.parse(localStorage.getItem("products")) || [];
+
+let box = document.getElementById("sellerProducts");
+
+
+if(box){
+
+sellerProducts.forEach(function(product){
+
+
+box.innerHTML += `
+
+<div class="product">
+
+<h3>${product.name}</h3>
+
+<p>${product.price} сом</p>
+
+<button>
+🛒 В корзину
+</button>
+
+</div>
+
+`;
+
+
+});
+
+}
