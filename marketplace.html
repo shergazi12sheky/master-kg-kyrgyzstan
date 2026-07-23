@@ -25,10 +25,14 @@
 
 <nav>
 
-<a href="index.html">Главная</a>
-<a href="marketplace.html">Маркетплейс</a>
-<a href="#">Услуги</a>
-<a href="#">Корзина</a>
+<a href="index.html">🏠 Главная</a>
+<a href="marketplace.html">🛒 Маркетплейс</a>
+<a href="services.html">🛠 Услуги</a>
+<a href="add-product.html">➕ Добавить товар</a>
+<a href="seller.html">🏪 Продавцам</a>
+<a href="cart.html">🛒 Корзина</a>
+<a href="profile.html">👤 Кабинет</a>
+<a href="login.html">🔐 Войти</a>
 
 </nav>
 
@@ -36,10 +40,11 @@
 
 
 
+
 <section class="hero">
 
 <h1>
-Все товары Кыргызстана
+🛒 Маркетплейс Кыргызстана
 </h1>
 
 <p>
@@ -47,57 +52,78 @@
 </p>
 
 
-<input type="text" placeholder="Поиск товара...">
+<div class="search-box">
 
-<button>
-Найти
+<input id="searchInput" 
+type="text" 
+placeholder="Поиск товара...">
+
+
+<button onclick="searchProducts()">
+🔍 Найти
 </button>
 
+</div>
 
 </section>
+
+
+
+
+<section class="categories">
+
+<h2>
+Категории
+</h2>
+
+
+<div class="grid">
+
+<div class="card">
+📱 Электроника
+</div>
+
+<div class="card">
+👕 Одежда
+</div>
+
+<div class="card">
+💄 Косметика
+</div>
+
+<div class="card">
+🏠 Дом
+</div>
+
+<div class="card">
+🚗 Авто
+</div>
+
+</div>
+
+</section>
+
 
 
 
 <section class="products">
 
-
 <h2>
-Популярные товары
+🔥 Популярные товары
 </h2>
 
 
-
-<div class="product">
-
-<img src="https://via.placeholder.com/250">
-
-<h3>
-Смартфон iPhone
-</h3>
-
-<p>
-45 000 сом
-</p>
-
-<button>
-🛒 В корзину
-</button>
-
-</div>
+<div class="grid">
 
 
 
-<div class="product">
+<div class="product electronics">
 
 <img src="https://via.placeholder.com/250">
 
-<h3>
-Кроссовки Nike
-</h3>
+<h3>📱 iPhone 13</h3>
 
-<p>
-6 000 сом
-</p>
+<p>45 000 сом</p>
 
 <button>
 🛒 В корзину
@@ -108,17 +134,13 @@
 
 
 
-<div class="product">
+<div class="product electronics">
 
 <img src="https://via.placeholder.com/250">
 
-<h3>
-Косметика
-</h3>
+<h3>📺 Samsung TV</h3>
 
-<p>
-2 500 сом
-</p>
+<p>32 000 сом</p>
 
 <button>
 🛒 В корзину
@@ -126,29 +148,47 @@
 
 </div>
 
+
+
+
+<div class="product clothes">
+
+<img src="https://via.placeholder.com/250">
+
+<h3>👕 Мужская одежда</h3>
+
+<p>3000 сом</p>
+
+<button>
+🛒 В корзину
+</button>
+
+</div>
+
+
+
+
+<div class="product beauty">
+
+<img src="https://via.placeholder.com/250">
+
+<h3>💄 Корейская косметика</h3>
+
+<p>2500 сом</p>
+
+<button>
+🛒 В корзину
+</button>
+
+</div>
+
+
+</div>
 
 
 </section>
 
 
-
-<section class="seller">
-
-<h2>
-Стать продавцом
-</h2>
-
-<p>
-Добавляйте свои товары и получайте клиентов
-</p>
-
-
-<button>
-➕ Добавить товар
-</button>
-
-
-</section>
 
 
 
@@ -159,6 +199,7 @@
 </p>
 
 </footer>
+
 
 
 <script src="script.js"></script>
