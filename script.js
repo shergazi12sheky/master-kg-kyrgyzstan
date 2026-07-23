@@ -201,3 +201,33 @@ localStorage.setItem("user", JSON.stringify(user));
 alert("Аккаунт создан!");
 
 }
+// ILBIRS Profile Load
+
+let savedUser = JSON.parse(localStorage.getItem("user"));
+
+
+let nameBox = document.getElementById("userName");
+let emailBox = document.getElementById("userEmail");
+
+
+if(savedUser && nameBox && emailBox){
+
+nameBox.innerHTML = savedUser.name;
+
+emailBox.innerHTML = "Email: " + savedUser.email;
+
+}
+
+
+
+// Logout
+
+function logout(){
+
+localStorage.removeItem("user");
+
+alert("Вы вышли из аккаунта");
+
+window.location.href="login.html";
+
+}
