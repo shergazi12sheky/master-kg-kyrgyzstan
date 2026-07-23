@@ -272,3 +272,42 @@ ${order.name}
 
 
 }
+// ILBIRS Seller Orders
+
+let sellerBox = document.getElementById("sellerOrders");
+
+let customerOrders = JSON.parse(localStorage.getItem("orders")) || [];
+
+
+if(sellerBox && customerOrders.length > 0){
+
+sellerBox.innerHTML = "";
+
+
+customerOrders.forEach(function(order){
+
+
+sellerBox.innerHTML += `
+
+<div class="product">
+
+<h3>
+${order.name}
+</h3>
+
+<p>
+Цена: ${order.price}
+</p>
+
+<p>
+Новый заказ 📦
+</p>
+
+</div>
+
+`;
+
+});
+
+
+}
