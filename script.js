@@ -173,3 +173,31 @@ box.innerHTML += `
 });
 
 }
+// ILBIRS User Registration
+
+function registerUser(){
+
+let name = document.querySelector(".regName").value;
+
+let email = document.querySelector(".regEmail").value;
+
+let password = document.querySelector(".regPassword").value;
+
+
+let user = {
+
+name:name,
+
+email:email,
+
+password:password
+
+};
+
+
+localStorage.setItem("user", JSON.stringify(user));
+
+
+alert("Аккаунт создан!");
+
+}
