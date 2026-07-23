@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+    color: #222;
+}
+
+/* HEADER */
+
+header {
+    background: #111;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 8px;
+    font-size: 14px;
+}
+
+
+/* HERO */
+
+.hero {
+    background: linear-gradient(135deg, #111, #333);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.hero input {
+    margin-top: 25px;
+    padding: 15px;
+    width: 70%;
+    max-width: 400px;
+    border-radius: 10px;
+    border: none;
+}
+
+button {
+    padding: 15px 25px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #d4af37;
+    color: black;
+    font-weight: bold;
+}
+
+
+/* КАТЕГОРИИ */
+
+.categories,
+.products {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px #ddd;
+    font-size: 18px;
+}
+
+
+/* ТОВАРЛАР */
+
+.product {
+    background: white;
+    width: 250px;
+    display: inline-block;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px #ddd;
+}
+
+.product img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+
+/* iPhone үчүн */
+
+@media(max-width:700px){
+
+header {
+    flex-direction: column;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+.grid {
+    grid-template-columns: repeat(2,1fr);
+}
+
+.hero h1 {
+    font-size: 25px;
+}
+
+}
